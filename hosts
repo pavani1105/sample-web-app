@@ -1,2 +1,2 @@
 [test]
-Host_ip
+172.31.28.207 ansible_user=root ansible_ssh_pass=123456
