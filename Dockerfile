@@ -1,6 +1,6 @@
 FROM tomcat 
-WORKDIR webapps 
+WORKDIR /opt/tomcat/webapps 
 COPY target/WebApp.war .
 RUN rm -rf ROOT && mv WebApp.war ROOT.war
-#entrypoint
-ENTRYPOINT ["sh", "/usr/local/tomcat/bin/startup.sh"]
+EXPOSE 8080
+CMD ["/opt/tomcat/bin/catalina.sh", "run"]
